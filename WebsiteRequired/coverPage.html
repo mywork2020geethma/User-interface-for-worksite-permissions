@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header {
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5DC;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .content {
+            width: 90%; /* Adjust width to 90% for responsiveness */
+            max-width: 600px; /* Set a maximum width */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Container to hold the buttons */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap to the next line on small screens */
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Add gap between buttons */
+        }
+
+        nav a {
+            flex: 1;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 18px;
+            border: 2px solid;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: border-color 0.3s ease-in-out;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        nav a:active {
+            background: #FFF5EE;
+            border: #C0C0C0 5px;
+        }
+
+        nav a:hover {
+            border-color: #333;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TEMPORARY WORK AREA PERMIT</h1>
+    </header>
+
+    <div class="content">
+        <p>Select the Nature of the Risk</p> <br>
+
+        <div class="button-container">
+            <nav>
+
+                <a href="1.html" id="high" style="background-color: red; border: 3px solid darkred; color: white;" onclick="changeBorderColor(this)">High</a>
+                <a href="1.html" id="moderate" style="background-color: orange; border: 3px solid darkorange; color: white;" onclick="changeBorderColor(this)">Moderate</a>
+                <a href="1.html" id="low" style="background-color: green; border: 3px solid darkgreen; color: white;" onclick="changeBorderColor(this)">Low</a>
+
+            </nav>
+        </div>
+        <br><br>
+    </div>
+
+    <script>
+    function changeBorderColor(button) {
+               button.style.borderColor = "black";
+               button.style.color = "black";
+           }
+
+    </script>
+
+</body>
+
+</html>

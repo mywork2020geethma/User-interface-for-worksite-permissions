@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details Form_6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5DC;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column; /* Center vertically */
+        }
+
+        form {
+            width: 90%;
+            padding: 20px;
+            background-color: #F5F5DC;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            color: #444;
+            display: block;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        input[type="text"],
+        select,
+        input[type="datetime-local"],
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 0 auto; /* Center the text box horizontally */
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+            display: block;
+        }
+
+        input[type="button"] {
+            background-color: #008000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            font-size: 18px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #006400;
+        }
+
+        /* Style for the area to display selected option */
+        #selectedOptions {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            width: 90%; /* Center the selected options area */
+            margin: 0 auto; /* Center the selected options area */
+            text-align: left;
+        }
+
+        .next-button {
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin-left: auto;
+          font-size: 18px;
+        }
+
+        .next-button button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .next-button button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin-left: auto;
+          font-size: 18px;
+        }
+
+        .back-button button {
+            background-color:#808080 ;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .back-button button:hover {
+            background-color: #000000;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <label for="personEnter">Name of person(s) & team entering the site:</label><br>
+        <select id="personEnter" name="personEnter" required>
+            <option value="">Select an option</option>
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+        </select>
+        <br>
+        <input type="button" value="Add" onclick="displaySelectedOption()">
+    </form> <br>
+
+<form>
+    <div id="selectedOptions"></div>
+</form>
+
+<div class="back-button" >
+    <button onclick="goToPage('5.html')">Back</button>
+</div>
+
+<div class="next-button">
+    <button onclick="goToPage('7.html')">Next</button>
+</div>
+
+    <script>
+
+    function goToPage(page) {
+        window.location.href = page;
+    }
+        function displaySelectedOption() {
+            const selectElement = document.getElementById('personEnter');
+            const selectedOption = selectElement.options[selectElement.selectedIndex].text;
+
+            const selectedOptionsArea = document.getElementById('selectedOptions');
+            const newOptionElement = document.createElement('div');
+            newOptionElement.textContent = selectedOption;
+            selectedOptionsArea.appendChild(newOptionElement);
+        }
+    </script>
+</body>
+</html>

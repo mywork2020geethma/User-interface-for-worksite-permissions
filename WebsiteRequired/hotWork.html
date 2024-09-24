@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOT WORK / FIRE PERMIT</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5DC;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+
+        }
+
+        .proceed-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .proceed-button button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .proceed-button button:hover {
+            background-color: #0056b3;
+        }
+
+        p{
+          margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>HOT WORK / FIRE PERMIT</h1>
+<div class="content">
+<p>THIS PERMIT IS STRICTLY VALID ONE WEEK FROM THE DATE OF ISSUE</p>
+        <h3>Precautions</h3>
+      <p>IF OPERATING CONDITIONS ARE CHANGED, THAT AFFECTS THE SAFETY OF PERSONNEL AND MATERIAL, THIS PERMIT BECOMES VOID</p>
+
+    <ul>
+    <li>Fire extinguishers should be on hand and contain test certificate/tags for good working order.</li>
+    <li>No combustible materials or flammable liquids should be present at the work site.</li>
+    <li>All personnel involved with work should be issued with appropriate PPEs.</li>
+    <li>In case of gas welding, both gas bottles (Oxygen, Acetylene) and the torch must contain flame arrestors. The gas hoses must be in good condition with no surface damages.</li>
+</ul> 
+
+<label for="fire-extinguisher">Type of fire extinguisher: </label>
+<input type="text" id="fire-extinguisher" name="fire-extinguisher" required>
+<label for="issued-by-sagt">Issued by SAGT:</label>
+<input type="checkbox" id="sagt-yes" name="sagt-issued" value="yes">
+<label for="sagt-yes">YES</label>
+<input type="checkbox" id="sagt-no" name="sagt-issued" value="no">
+<label for="sagt-no">NO</label><br>
+
+      <p>
+        I certify that the gas welding plant is equipped with the flame
+arrestors at the regulators (before the hose) and at the welding
+torch (after the hose). The hoses are in good condition and no
+damages found on it.
+      </p>
+      </div>
+
+        <div class="proceed-button">
+            <button>Proceed</button>
+        </div>
+</body>
+</html>

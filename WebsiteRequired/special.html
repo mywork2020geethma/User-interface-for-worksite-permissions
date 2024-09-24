@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Permit Requirements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5DC;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .requirements {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 50px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .proceed-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .proceed-button button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .proceed-button button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+  <h1>SPECIAL PERMIT REQUIREMENTS</h1>
+    <div class="requirements">
+
+        <form>
+            <ul>
+                <li class="checkbox-label">
+                    <input type="checkbox" id="workAtHeight" name="workAtHeight" value="WORK AT HEIGHT">
+                    <label for="workAtHeight">Work at height</label>
+                </li>
+                <li class="checkbox-label">
+                    <input type="checkbox" id="highVoltage" name="highVoltage" value="HIGH VOLTAGE">
+                    <label for="highVoltage">High voltage</label>
+                </li>
+                <li class="checkbox-label">
+                    <input type="checkbox" id="hotWork" name="hotWork" value="HOT WORK/FIRE">
+                    <label for="hotWork">Hot work/fire</label>
+                </li>
+                <li class="checkbox-label">
+                    <input type="checkbox" id="confinedArea" name="confinedArea" value="WORK IN CONFINED AREA">
+                    <label for="confinedArea">Work in confined area</label>
+                </li>
+                <li class="checkbox-label">
+                    <input type="checkbox" id="excavation" name="excavation" value="EXCAVATION">
+                    <label for="excavation">Excavation</label>
+                </li>
+                <li class="checkbox-label">
+                    <input type="checkbox" id="hazardousChemicals" name="hazardousChemicals" value="WORK WITH HAZARDOUS CHEMICALS">
+                    <label for="hazardousChemicals">Work with hazardous chemicals</label>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <div class="proceed-button">
+        <button onclick="proceed()">Proceed</button>
+    </div>
+
+    <script>
+       function proceed() {
+           const workAtHeightCheckbox = document.getElementById("workAtHeight");
+           const hotWorkCheckbox = document.getElementById("hotWork");
+
+           if (workAtHeightCheckbox.checked && hotWorkCheckbox.checked) {
+              window.open("workAtHeight.html");
+              window.open("hotWork.html");
+           } else if (workAtHeightCheckbox.checked) {
+               window.open("workAtHeight.html");
+           } else if (hotWorkCheckbox.checked) {
+               window.open("hotWork.html");
+           }
+       }
+   </script>
+
+</body>
+</html>
